@@ -1,0 +1,19 @@
+<div class="example-container">
+    <h2> Total Tasks : <span style="color: red;">{{ counterModel }} </span> </h2>
+    <br/>
+    <mat-form-field> <input matInput [(ngModel)]="titleModel" placeholder="Title"> </mat-form-field>
+    <br/>
+    <mat-form-field> <input matInput [(ngModel)]="contentModel" placeholder="Content"> </mat-form-field>
+    <br/>
+    <mat-form-field> <textarea matInput [(ngModel)]="taskModel" rows="3" placeholder="Description/ Task- Details"></textarea> </mat-form-field>
+</div>
+
+<br>
+
+<button class="btn-add" (click)="createQuicknotes()"> <span>Add Task </span>
+</button>
+
+<p *ngFor="let i of quicknotes">
+    <mat-card-title> {{ i.title }} </mat-card-title>
+    <mat-card> {{ i.content }} </mat-card>
+    <mat-card> {{ i.task }} </mat-card>
